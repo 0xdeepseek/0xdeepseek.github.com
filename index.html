@@ -6,23 +6,9 @@
     <title>Airdrop Tasks - Angel Dark Theme</title>
     <style>
         /* ======= Global Styles ======= */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background: #0a0a0a;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            text-align: center;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #0a0a0a; color: #fff; overflow-x: hidden; }
+        .container { max-width: 900px; margin: auto; padding: 20px; text-align: center; }
 
         /* ======= Header Styles ======= */
         header {
@@ -35,25 +21,10 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #f8e7b7; /* Angelic Golden */
-            text-shadow: 0px 0px 10px #f8e7b7;
-        }
-        .menu {
-            display: flex;
-            gap: 15px;
-        }
-        .menu a {
-            color: #bbb;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .menu a:hover {
-            color: #f8e7b7;
-            text-shadow: 0px 0px 5px #f8e7b7;
-        }
+        .logo { font-size: 24px; font-weight: bold; color: #f8e7b7; text-shadow: 0px 0px 10px #f8e7b7; }
+        .menu { display: flex; gap: 15px; }
+        .menu a { color: #bbb; text-decoration: none; transition: 0.3s; }
+        .menu a:hover { color: #f8e7b7; text-shadow: 0px 0px 5px #f8e7b7; }
 
         /* ======= Blog Post Styles ======= */
         .blog {
@@ -63,18 +34,14 @@
             box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
             transition: 0.3s;
+            cursor: pointer;
         }
         .blog:hover {
             transform: scale(1.02);
             box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
         }
-        .blog h2 {
-            color: #f8e7b7;
-            text-shadow: 0px 0px 5px #f8e7b7;
-        }
-        .blog p {
-            color: #ccc;
-        }
+        .blog h2 { color: #f8e7b7; text-shadow: 0px 0px 5px #f8e7b7; }
+        .blog p { color: #ccc; }
 
         /* ======= Angelic Glow Animation ======= */
         .angel-glow {
@@ -86,7 +53,6 @@
             text-shadow: 0px 0px 50px rgba(248, 231, 183, 0.5);
             animation: angelPulse 4s infinite alternate;
         }
-
         @keyframes angelPulse {
             0% { opacity: 0.2; }
             100% { opacity: 0.8; }
@@ -110,34 +76,14 @@
     <div class="container">
         <h1 style="color: #f8e7b7; text-shadow: 0px 0px 10px #f8e7b7;">Latest Airdrop Blog Posts</h1>
         
-        <div class="blog">
+        <div class="blog" onclick="location.href='posts/post1.html'">
             <h2>🔥 How to Find the Best Airdrops in 2025?</h2>
             <p>Discover the hottest airdrops and maximize your rewards...</p>
-        </div>
-
-        <div class="blog">
-            <h2>🚀 Top Crypto Airdrops This Month</h2>
-            <p>Get early access to exclusive airdrop campaigns...</p>
-        </div>
-
-        <div class="blog">
-            <h2>💰 Step-by-Step Guide to Claim Airdrops</h2>
-            <p>Learn how to safely claim your free crypto...</p>
         </div>
     </div>
 
     <!-- Angel Glow Icon -->
     <div class="angel-glow">👼</div>
-
-    <!-- JavaScript for Smooth Scrolling -->
-    <script>
-        document.querySelectorAll('.menu a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Navigation is not functional in this demo.');
-            });
-        });
-    </script>
 
 </body>
 </html>
