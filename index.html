@@ -3,87 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airdrop Tasks - Angel Dark Theme</title>
+    <title>Project 12 3 4 5</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* ======= Global Styles ======= */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #0a0a0a; color: #fff; overflow-x: hidden; }
-        .container { max-width: 900px; margin: auto; padding: 20px; text-align: center; }
-
-        /* ======= Header Styles ======= */
-        header {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+        body {
+            margin: 0;
+            font-family: 'JetBrains Mono', monospace;
+            background: #0a0a0a;
+            color: #fff;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
         }
-        .logo { font-size: 24px; font-weight: bold; color: #f8e7b7; text-shadow: 0px 0px 10px #f8e7b7; }
-        .menu { display: flex; gap: 15px; }
-        .menu a { color: #bbb; text-decoration: none; transition: 0.3s; }
-        .menu a:hover { color: #f8e7b7; text-shadow: 0px 0px 5px #f8e7b7; }
 
-        /* ======= Blog Post Styles ======= */
-        .blog {
-            background: rgba(255, 255, 255, 0.05);
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #00ff00, #003300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+            position: relative;
+            z-index: 2;
+            animation: glow 3s infinite alternate;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
-            margin-bottom: 20px;
-            transition: 0.3s;
-            cursor: pointer;
+            backdrop-filter: blur(8px);
         }
-        .blog:hover {
-            transform: scale(1.02);
-            box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
-        }
-        .blog h2 { color: #f8e7b7; text-shadow: 0px 0px 5px #f8e7b7; }
-        .blog p { color: #ccc; }
 
-        /* ======= Angelic Glow Animation ======= */
-        .angel-glow {
-            position: fixed;
-            bottom: -20px;
-            right: 20px;
-            font-size: 80px;
-            color: rgba(255, 255, 255, 0.1);
-            text-shadow: 0px 0px 50px rgba(248, 231, 183, 0.5);
-            animation: angelPulse 4s infinite alternate;
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
+            }
+            50% {
+                text-shadow: 0 0 10px #003300, 0 0 20px #003300;
+            }
+            100% {
+                text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
+            }
         }
-        @keyframes angelPulse {
-            0% { opacity: 0.2; }
-            100% { opacity: 0.8; }
+
+        .h1-container {
+            position: relative;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .link {
+            display: inline-block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            background: rgba(0, 255, 0, 0.2);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
-
-    <!-- HEADER -->
-    <header>
-        <div class="logo">Airdrop Tasks</div>
-        <nav class="menu">
-            <a href="#">Home</a>
-            <a href="#">Blog</a>
-            <a href="#">Airdrops</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <div class="container">
-        <h1 style="color: #f8e7b7; text-shadow: 0px 0px 10px #f8e7b7;">Latest Airdrop Blog Posts</h1>
-        
-        <div class="blog" onclick="location.href='posts/post1.html'">
-            <h2>🔥 How to Find the Best Airdrops in 2025?</h2>
-            <p>Discover the hottest airdrops and maximize your rewards...</p>
-        </div>
+    <canvas id="matrixCanvas"></canvas>
+    <div class="h1-container">
+        <h1>DegenZer0</h1>
     </div>
+    <div class="links">
+        <a href="posts/article1.html" class="link">Article 1</a>
+        <a href="posts/article2.html" class="link">Article 2</a>
+        <a href="posts/article3.html" class="link">Article 3</a>
+        <a href="posts/article4.html" class="link">Article 4</a>
+        <a href="posts/article5.html" class="link">Article 5</a>
+        <a href="posts/article6.html" class="link">Article 6</a>
+        <a href="posts/article7.html" class="link">Article 7</a>
+    </div>
+    <script>
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
 
-    <!-- Angel Glow Icon -->
-    <div class="angel-glow">👼</div>
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&*()';
+        const matrix = letters.split('');
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(0);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = 'rgba(0, 255, 0, 0.8)';
+            ctx.font = fontSize + 'px JetBrains Mono';
+            for (let i = 0; i < drops.length; i++) {
+                const text = matrix[Math.floor(Math.random() * matrix.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 50);
+    </script>
 </body>
 </html>
